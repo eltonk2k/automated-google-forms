@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-public class CasodeTeste02PreenchimentodeformulrioGoogleFormscomEmailInvalidoTest {
+public class CasodeTeste02PreenchimentoFormularioGoogleFormscomEmailInvalidoTest {
     private FormsGooglePO formsGooglePO;
 
     private WebDriver driver;
@@ -26,7 +26,7 @@ public class CasodeTeste02PreenchimentodeformulrioGoogleFormscomEmailInvalidoTes
 
 
     @Test
-    public void ctPreenchimentodeformulriogoogleformscomSucesso() {
+    public void ctPreenchimentoGoogleFormscomEmailInvalido() {
         formsGooglePO.accessPage();
 
         formsGooglePO.adicionarNome();
@@ -36,6 +36,7 @@ public class CasodeTeste02PreenchimentodeformulrioGoogleFormscomEmailInvalidoTes
         formsGooglePO.adicionarNumeroCartao();
         formsGooglePO.adcionarDataNascimento();
         formsGooglePO.clickEnviar();
+        formsGooglePO.verificarMensagemFormatoEmailInvalido();
 
 
     }

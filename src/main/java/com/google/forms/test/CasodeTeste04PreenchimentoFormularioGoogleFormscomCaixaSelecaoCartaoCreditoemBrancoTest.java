@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-public class CasodeTeste01PreenchimentodeformulriogoogleformscomSucessoTest {
+public class CasodeTeste04PreenchimentoFormularioGoogleFormscomCaixaSelecaoCartaoCreditoemBrancoTest {
     private FormsGooglePO formsGooglePO;
 
     private WebDriver driver;
@@ -26,20 +26,16 @@ public class CasodeTeste01PreenchimentodeformulriogoogleformscomSucessoTest {
 
 
     @Test
-    public void ctPreenchimentodeformulriogoogleformscomSucesso() {
+    public void ctPreenchimentoFormularioGoogleFormscomCaixaSelecaoCartaoCreditoemBranco() {
         formsGooglePO.accessPage();
 
         formsGooglePO.adicionarNome();
         formsGooglePO.adicionarEmail();
-        formsGooglePO.selecionarCartaoVisa();
-        formsGooglePO.selecionarCartaoElo();
         formsGooglePO.adicionarNumeroCartao();
         formsGooglePO.adcionarDataNascimento();
         formsGooglePO.clickEnviar();
 
-        formsGooglePO.verificarTituloForms();
-        formsGooglePO.verificarEnvioMensagemSucessoForms();
-        formsGooglePO.verificarBotaoEnviarOutraResposta();
+        formsGooglePO.verificarMensagemCaixaSelecaoCartaoCreditoVazio();
 
     }
 }

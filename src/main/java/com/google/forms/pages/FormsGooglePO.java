@@ -18,7 +18,7 @@ public class FormsGooglePO {
 	}
 
 	public void quit() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	public void accessPage() {
@@ -91,5 +91,17 @@ public class FormsGooglePO {
 		assertThat(driver.findElement(By.xpath("//div[3]/span")).getText(), is("Formato de e-mail inválido."));
 	}
 
+	public void adicionarNumeroCartaoInvalido() {
+		driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/div[1]/div/div[1]/input")).click();
+		driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/div[1]/div/div[1]/input")).sendKeys("stringStringStringString");
+	}
+
+	public void verificarMensagemFormatoCartaoInvalido() {
+		assertThat(driver.findElement(By.xpath("//div[4]/div/div/div[3]/span")).getText(), is("Número de cartão inválido."));
+	}
+
+	public void verificarMensagemCaixaSelecaoCartaoCreditoVazio() {
+		assertThat(driver.findElement(By.xpath("//div/div/div[3]/span")).getText(), is("Esta pergunta é obrigatória"));
+	}
 
 }
